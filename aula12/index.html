@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Avaliacao</title> <!-- adapte -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Avalie o Trailer de Vigadores Doomsday</h1> <!-- adapte -->
+<img src="Vingadores Doomsday.jpg" alt="Vingadores Doomsday" id="imgCapa">
+<form id="formCadastro">
+<label>Nome </label> <!-- adapte -->
+<input type="text" id="inputNome"
+placeholder="Digite seu nome">
+<span id="erroNome" class="erro oculto">Nome obrigatorio</span>
+<label>E-mail</label>
+<input type="email" id="inputEmail"
+placeholder="seu@email.com">
+<span id="erroEmail" class="erro oculto">E-mail invalido</span>
+<label>Nota (1 a 10)</label> <!-- adapte -->
+<input type="text" id="inputNota"
+placeholder="Digite um numero de 1 a 10">
+<span id="erroNota" class="erro oculto">Nota entre 1 e 10</span>
+<label>Comentario</label> <!-- adapte -->
+<textarea id="inputComentario"
+placeholder="Escreva sua opiniao..."></textarea>
+<span id="contadorChars" class="contador">0 / 200</span>
+<span id="erroComentario" class="erro oculto">Minimo 10
+caracteres</span>
+<button type="submit">Enviar</button>
+</form>
+<script src="app.js"></script>
+</body>
+</html>
