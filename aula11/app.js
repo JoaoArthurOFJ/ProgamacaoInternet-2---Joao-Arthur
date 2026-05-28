@@ -21,36 +21,43 @@ function cadastrar() {
     return;
   }
   erroNome.classList.add('oculto'); // esconde o erro
-
-  // próximo passo
-}
- // 1. Criar o card
+  
+  contador++;
+  
+  // 1. Criar o card
   const card = document.createElement('div');
   card.classList.add('card');
+  card.setAttribute('data-id', contador);
 
   // 2. Criar o texto do card
   const texto = document.createElement('span');
-  texto.textContent = nome;
+  texto.textContent = '#' + card.getAttribute('data-id') + ' — ' + nome;
 
-  // 3. Criar o botão Excluir
+  // 3. Criar o botão Concluída
+  const btnConcluir = document.createElement('button');
+  btnConcluir.textContent = 'Concluída';
+  btnConcluir.classList.add('btn-concluir');
+
+  // 4. Criar o botão Excluir
   const btn = document.createElement('button');
   btn.textContent = 'Excluir';
   btn.classList.add('btn-excluir');
 
-  contador++;
-  card.setAttribute('data-id', contador);
-  texto.textContent = '#' + card.getAttribute('data-id') + ' — ' + nome;
-
-  // 4. Montar e inserir (appendChild)
+  // 5. Montar e inserir (appendChild)
   card.appendChild(texto);
+  card.appendChild(btnConcluir);
   card.appendChild(btn);
   lista.appendChild(card);
 
-  // 5. Limpar o campo
+  // 6. Limpar o campo
   inputNome.value = '';
-  inputNome.focus();
 
-    btn.addEventListener('click', function() {
+  btnConcluir.addEventListener('click', function() {
+    card.classList.toggle('concluida');
+  });
+
+  btn.addEventListener('click', function() {
     // parentElement navega do botão para o card pai
     btn.parentElement.remove();
   });
+}

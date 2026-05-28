@@ -14,3 +14,6 @@ button { padding: 0.6rem; background: #1E3A5F; color: #fff;
           display: flex; justify-content: space-between; align-items: center; }
 .btn-excluir { background: #DC2626; color: white; border: none;
                border-radius: 4px; padding: 0.2rem 0.6rem; cursor: pointer; }
+.btn-concluir { background: #16A34A; color: white; border: none;
+                border-radius: 4px; padding: 0.2rem 0.6rem; cursor: pointer; }
+.concluida span { text-decoration: line-through; color: #999; }
